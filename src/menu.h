@@ -10,7 +10,6 @@ typedef struct{
 void mainMenu();
 void downloadMenu();
 void scheduleMenu();
-void addDateMenu();
 void rmDateMenu();
 
 #endif

@@ -11,17 +11,17 @@ void getGW2ExchangeRates(){
 }
 
 void getTopGW2CraftingMats(){
-	getGW2Item(19725, "gw2data/ancient/Ancient_Wood_Log_Item");
-	getGW2Item(19745, "gw2data/gossamer/Gossamer_Scrap_Item");
-	getGW2Item(19732, "gw2data/hardened/Hardened_Leather_Section_Item");
-	getGW2Item(19701, "gw2data/orichalcum/Orichalcum_Ore_Item");
+	getGW2Item(19725, "../gw2data/ancient/Ancient_Wood_Log_Item");
+	getGW2Item(19745, "../gw2data/gossamer/Gossamer_Scrap_Item");
+	getGW2Item(19732, "../gw2data/hardened/Hardened_Leather_Section_Item");
+	getGW2Item(19701, "../gw2data/orichalcum/Orichalcum_Ore_Item");
 }
 
 void getTopGW2CraftingMatPrices(){
-	getGW2ItemPrice("19725", "gw2data/ancient/Ancient_Wood_Log");
-	getGW2ItemPrice("19745", "gw2data/gossamer/Gossamer_Scrap");
-	getGW2ItemPrice("19732", "gw2data/hardened/Hardened_Leather_Section");
-	getGW2ItemPrice("19701", "gw2data/orichalcum/Orichalcum_Ore");
+	getGW2ItemPrice("19725", "../gw2data/ancient/Ancient_Wood_Log");
+	getGW2ItemPrice("19745", "../gw2data/gossamer/Gossamer_Scrap");
+	getGW2ItemPrice("19732", "../gw2data/hardened/Hardened_Leather_Section");
+	getGW2ItemPrice("19701", "../gw2data/orichalcum/Orichalcum_Ore");
 }
 
 void getGW2Item(int id, char *fileNamePrefix){
@@ -39,14 +39,14 @@ void getGW2ItemPrice(char *ids, char *fileNamePrefix){
 }
 
 void getAllGW2Items(){
-	getData("gw2data/items", ".json", "https://api.guildwars2.com/v2/items");
+	getData("../gw2data/items", ".json", "https://api.guildwars2.com/v2/items");
 }
 
 void coinsToGems(){
-	getData("gw2data/coins/coins", ".json", "https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=100000");
+	getData("../gw2data/coins/coins", ".json", "https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=100000");
 }
 
 void gemsToCoins(){
-	getData("gw2data/gems/gems", ".json", "https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100");
+	getData("../gw2data/gems/gems", ".json", "https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100");
 }
 

@@ -72,27 +72,28 @@ void scheduleDownload(char *game){
 
 	if(nDates <= 0){
 		printw("There are no scheduled dates for downloading\n");
-		getch();
+		return;
 	}
 
 	for(i = 0; i < nDates; i++){
 		printScheduleFrom(i);
+		refresh();
 		waitForDate(schedule[i]);
-		printw("Running scheduled download...\n");
+		printw("Running scheduled download NO%d...\n", i+1);
 
 		if(strcmp(game, "Guild Wars 2") == 0){
 			getGW2ExchangeRates();
 			getTopGW2CraftingMatPrices();
 		}
 		else if(strcmp(game, "Runescape") == 0){
-			getTopRunescapeCraftingMatPrices();
+			getBondPrice();
+			//getTopRunescapeCraftingMatPrices();
 		}
 
 		printw("Download complete\n");
 	}
 	nDates = 0;
 	printw("\nData collection finished\n");
-	getch();
 }
 
 void waitForDate(struct tm date){

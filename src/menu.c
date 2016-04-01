@@ -63,7 +63,10 @@ void downloadMenu(){
 			getTopGW2CraftingMatPrices();
 		}
 		else if(selected == 2){
+			getBondPrice();
 			getTopRunescapeCraftingMatPrices();
+			getHistoricalBondPrices();
+			getHistoricalCraftingMatPrices();
 		}
 		else if(selected == 3){
 			customDownload();
@@ -106,10 +109,13 @@ void scheduleMenu(){
 			getch();
 		}
 		else if(selected == 4){
+			clear();
 			scheduleDownload("Guild Wars 2");
 		}
 		else if(selected == 5){
+			clear();
 			scheduleDownload("Runescape");
+			getch();
 		}
 		else if(selected == 6){
 		}
@@ -117,10 +123,6 @@ void scheduleMenu(){
 			inMenu = false;
 		}
 	}
-}
-
-void addDateMenu(){
-	
 }
 
 void rmDateMenu(){
